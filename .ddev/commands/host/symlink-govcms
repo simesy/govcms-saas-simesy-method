@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Link your Drupal site to the bits that GovCMS lets you customise.
+ln -s ../../.govcms/themes web/themes/custom
+ln -s ../.govcms/config/default config/default

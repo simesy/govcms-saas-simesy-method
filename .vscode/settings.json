@@ -1,0 +1,7 @@
+{
+    "search.exclude": {
+        "**/.govcms": true,
+        "**/contrib/*/config": true,
+        "**/web/sites/default/files/private/backups": true
+    }
+}
