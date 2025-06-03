@@ -26,6 +26,10 @@ devs who
 
 ## Sync data
 
+This could be automated better since there is a database image available if you 
+already have access to your client's project, but this is the simple manual
+sync if I need it.
+
 1. Go to dashboard.govcms.gov.au and go to Tasks for your project.
 2. Run SQL Dump task.
 3. Download the database
