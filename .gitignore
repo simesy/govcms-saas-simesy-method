@@ -11,15 +11,21 @@ config/default
 /web/themes/contrib/
 /web/profiles/contrib/
 /web/libraries/
-/.ht.router.php
-/.htaccess
-/INSTALL.txt
-/README.txt
-/autoload.php
-/example.gitignore
-/index.php
-/update.php
-/web.config
+/web/.ht.router.php
+/web/.htaccess
+/web/INSTALL.txt
+/web/README.txt
+/web/autoload.php
+/web/example.gitignore
+/web/index.php
+/web/.csslintrc
+/web/.eslintignore
+/web/.eslintrc.json
+/web/.gitignore
+/web/index.php
+/web/robots.txt
+/web/update.php
+/web/web.config
 default.services.yml
 default.settings.php
 
@@ -44,5 +50,6 @@ drush-backups
 *.sql
 *.zip
 
+# I keep the database dumps in .data, and the govcms repo in .govcms (not a submodule, nothing fancy.)
 .data
 .govcms
