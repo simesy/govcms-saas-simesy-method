@@ -1,4 +1,4 @@
-name: apsc
+name: NAMESPACE
 type: drupal10
 docroot: web
 php_version: "8.3"
