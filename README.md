@@ -27,9 +27,45 @@ devs who:
 
 1. Git clone your govcms repo (assuming it's SaaS site) into `.govcms` directory.
 2. Update the PROJECTNAME in .ddev/config.yaml
-3. Run `composer install`, `ddev start` etc.
-4. Run `ddev symlink-govcms` symlinks govcms folders into the right places
-5. Prove it's working - `ddev si minimal` and visit https://PROJECTNAME.ddev.site`
+3. Note also port `8443` which I lock down, you might need to fix that for your own setup.
+4. Run `composer install`, `ddev start` etc.
+5. Run `ddev symlink-govcms` symlinks govcms folders into the right places
+6. Prove it's working - `ddev si minimal` and visit https://PROJECTNAME.ddev.site`
+
+## Example
+
+Again, note that I lock down ports 8443 and 8080 for DDEV.
+
+```
+$ ddev st
+┌────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ Project: apsc ~/_/sites/apsc https://apsc.ddev.site:8443                                               │
+│ Docker platform: rancher-desktop                                                                       │
+│ Router: traefik                                                                                        │
+├──────────────┬──────┬─────────────────────────────────────────────────────────────┬────────────────────┤
+│ SERVICE      │ STAT │ URL/PORT                                                    │ INFO               │
+├──────────────┼──────┼─────────────────────────────────────────────────────────────┼────────────────────┤
+│ web          │ OK   │ https://acme.ddev.site:8443                                 │ drupal10 PHP 8.3   │
+│              │      │ InDocker -> Host:                                           │ Server: nginx-fpm  │
+│              │      │  - web:80 -> 127.0.0.1:32782                                │ Docroot: 'web'     │
+│              │      │  - web:443 -> 127.0.0.1:32781                               │ Perf mode: none    │
+│              │      │  - web:8025 -> 127.0.0.1:32846                              │ Node.js: 18        │
+├──────────────┼──────┼─────────────────────────────────────────────────────────────┼────────────────────┤
+│ db           │ OK   │ InDocker -> Host:                                           │ mysql:8.0          │
+│              │      │  - db:3306 -> 127.0.0.1:32845                               │ User/Pass: 'db/db' │
+│              │      │                                                             │ or 'root/root'     │
+├──────────────┼──────┼─────────────────────────────────────────────────────────────┼────────────────────┤
+│ solr         │ OK   │ https://acme.ddev.site:8943                                 │                    │
+│              │      │ InDocker:                                                   │                    │
+│              │      │  - solr:8983                                                │                    │
+├──────────────┼──────┼─────────────────────────────────────────────────────────────┼────────────────────┤
+│ Mailpit      │      │ Mailpit: https://apsc.ddev.site:8026                        │                    │
+│              │      │ Launch: ddev mailpit                                        │                    │
+├──────────────┼──────┼─────────────────────────────────────────────────────────────┼────────────────────┤
+│ Project URLs │      │ https://acme.ddev.site:8443, https://127.0.0.1:32781,       │                    │
+│              │      │ http://acme.ddev.site:8080, http://127.0.0.1:32782          │                    │
+└──────────────┴──────┴─────────────────────────────────────────────────────────────┴────────────────────┘
+```
 
 ## Sync data
 
