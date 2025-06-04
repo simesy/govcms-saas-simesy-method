@@ -8,7 +8,7 @@ that you symlink your repo into
 ```
 
 This is purely for GovCMS SaaS (not PaaS or any other Drupal). Suitable only for experienced
-devs who
+devs who:
 
 * Are working with GovCMS SaaS and dislike the local dev setup.
 * Want to use a familiar DDEV setup.
@@ -19,17 +19,17 @@ devs who
 
 1. `composer.json` replicates GovCMS SaaS
 2. `.govcms` folder is git ignored - put your GovCMS clone there
-3. `.data` is git ignored - put other stuff
-4. A matching Solr should be ready to go, tested with one project
+3. `.data` is git ignored - I put DB dumps there
+4. Most settings are plug and play in `sites/default/dockers.settings.php`, tweak to taste
+5. Eg. a matching Solr should be ready to go, tested with one project
 
 ## Setup
 
 1. Git clone your govcms repo (assuming it's SaaS site) into `.govcms` directory.
 2. Update the PROJECTNAME in .ddev/config.yaml
-3. Run `composer install`
-4. Run `ddev start`
-5. Run `ddev symlink-govcms` symlinks govcms folders into the right places
-6. Run `ddev si minimal` and visit https://XXX.ddev.site`
+3. Run `composer install`, `ddev start` etc.
+4. Run `ddev symlink-govcms` symlinks govcms folders into the right places
+5. Prove it's working - `ddev si minimal` and visit https://PROJECTNAME.ddev.site`
 
 ## Sync data
 
