@@ -1,4 +1,4 @@
-name: NAMESPACE
+name: PROJECTNAME
 type: drupal10
 docroot: web
 php_version: "8.3"
@@ -9,4 +9,4 @@ database:
   type: mysql
   version: 8.0
 web_environment:
-- DRUSH_OPTIONS_URI=https://aspc.ddev.site
+- DRUSH_OPTIONS_URI=PROJECTNAME://aspc.ddev.site
