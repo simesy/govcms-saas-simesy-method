@@ -25,7 +25,7 @@ devs who
 ## Setup
 
 1. Git clone your govcms repo (assuming it's SaaS site) into `.govcms` directory.
-2. Update the project name in .ddev/config.yaml
+2. Update the PROJECTNAME in .ddev/config.yaml
 3. Run `composer install`
 4. Run `ddev start`
 5. Run `ddev symlink-govcms` symlinks govcms folders into the right places
