@@ -39,7 +39,7 @@ Again, note that I lock down ports 8443 and 8080 for DDEV.
 ```
 $ ddev st
 ┌────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│ Project: apsc ~/_/sites/apsc https://apsc.ddev.site:8443                                               │
+│ Project: acme ~/sites/acme https://acme.ddev.site:8443                                               │
 │ Docker platform: rancher-desktop                                                                       │
 │ Router: traefik                                                                                        │
 ├──────────────┬──────┬─────────────────────────────────────────────────────────────┬────────────────────┤
