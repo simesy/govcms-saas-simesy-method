@@ -1,5 +1,12 @@
 # DDEV for GovCMS SaaS
 
+```
+**tldr;**
+A DDEV scaffold
+that emulates GovCMS SaaS build
+that you symlink your repo into
+```
+
 This is purely for GovCMS SaaS (not PaaS or any other Drupal). Suitable only for experienced
 devs who
 
